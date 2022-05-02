@@ -45,6 +45,9 @@ class MeetingsController extends Controller
         ]);
     }
 
+    /**
+     * If a frontend framework was in play for this, I would not redirect, I would only return a 204
+     */
     public function delete(Request $request, $meetingId)
     {
         Meeting::destroy($meetingId);
@@ -57,7 +60,6 @@ class MeetingsController extends Controller
     /**
      * private functions
      */
-
     private function getUsers($meetingId){
         $users = [];
         $meetings_users = MeetingsUser::all();
