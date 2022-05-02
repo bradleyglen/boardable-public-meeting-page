@@ -28,6 +28,7 @@ class MeetingFactory extends Factory
         return [
             'title' => 'Test Meeting #' . $this->faker->numberBetween(0, 1000),
             'description' => $this->faker->sentences(6, true),
+            'agenda' => $this->faker->sentences(9, true),
             'location' => $this->faker->address,
             'start' => $start,
             'end' => $this->faker->dateTimeBetween($start, '+2 months'),
